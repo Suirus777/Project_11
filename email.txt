@@ -1,0 +1,35 @@
+<br>
+See <http://51.250.90.255:8080/job/project_11/22/display/redirect?page=changes><br><br>
+<br><br>
+Changes:<br>
+<br><br>
+[noreply] New test Project 11<br><br>
+
+<br><br><br><br>
+------------------------------------------<br>
+Started by GitHub push by Suirus777<br>
+Running as SYSTEM
+Building in workspace <http://51.250.90.255:8080/job/project_11/ws/><br>
+The recommended git tool is: NONE<br>
+No credentials specified<br>
+ > git rev-parse --resolve-git-dir <http://51.250.90.255:8080/job/project_11/ws/.git> # timeout=10<br>
+Fetching changes from the remote Git repository<br>
+ > git config remote.origin.url https://github.com/Suirus777/Project_11.git/ # timeout=10<br>
+Fetching upstream changes from https://github.com/Suirus777/Project_11.git/<br>
+ > git --version # timeout=10<br>
+ > git --version # 'git version 2.20.1'<br>
+ > git fetch --tags --force --progress -- https://github.com/Suirus777/Project_11.git/ +refs/heads/*:refs/remotes/origin/* # timeout=10<br>
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10<br>
+Checking out Revision 1fda9653a1f1d0d5cb5efd86714f9d160eeb656b (refs/remotes/origin/main)<br>
+ > git config core.sparsecheckout # timeout=10<br>
+ > git checkout -f 1fda9653a1f1d0d5cb5efd86714f9d160eeb656b # timeout=10<br>
+Commit message: "New test Project 11"<br>
+ > git rev-list --no-walk 82339f8dfb0dedab199e40555a6ba0ec400b47f1 # timeout=10<br>
+[project_11] $ /bin/sh -xe /tmp/jenkins1725801943167535605.sh<br>
++ rm -rf <http://51.250.90.255:8080/job/project_11/ws/Project_11><br>
++ git clone https://github.com/Suirus777/Project_11.git<br>
+Cloning into 'Project_11'...<br>
++ docker run -d -p 9889:80 --name=project_11 --mount type=bind,src=<http://51.250.90.255:8080/job/project_11/ws/Project_11,dst=/usr/share/nginx/html/> nginx<br>
+docker: Error response from daemon: Conflict. The container name "/project_11" is already in use by container "1bc236223170c9116cd1bcd73b5e714de6326b5340a0d1547e56e4b2c02f5b93". You have to remove (or rename) that container to be able to reuse that name.<br>
+See 'docker run --help'.<br>
+Build step 'Execute shell' marked build as failure<br><br><br>
