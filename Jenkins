@@ -1,0 +1,7 @@
+rm -rf /var/lib/jenkins/workspace/project_11/Project_11
+git clone https://github.com/Suirus777/Project_11.git 
+docker run -d -p 9889:80 --name=project_11 --mount type=bind,src=/var/lib/jenkins/workspace/project_11/Project_11,dst=/usr/share/nginx/html/ nginx
+curl -Is http://localhost:9889 | head -1
+echo -n 'http://localhost:9889/index.html' | openssl md5 -hex
+docker stop project_11
+docker rm project_11
